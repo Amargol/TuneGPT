@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       title: "Train",
-      href: "/app",
+      href: "/train",
     },
     {
       title: "Run",

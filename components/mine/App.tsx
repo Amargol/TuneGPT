@@ -1,14 +1,9 @@
-import Head from "next/head"
-import Link from "next/link"
 
-import { siteConfig } from "@/config/site"
 import { Layout } from "@/components/layout"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectSeparator, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Create from "@/components/mine/Create"
 import Consume from "@/components/mine/Consume"
@@ -16,7 +11,11 @@ import { OpenAIClient } from "@/lib/openai"
 
 const openai = OpenAIClient.getInstance()
 
-export default function IndexPage() {
+interface Props {
+  defaultTab: "train" | "run";
+}
+
+export default function App({ defaultTab } : Props) {
   const [position, setPosition] = useState("bottom")
   const [apiKey, setApiKey] = useState("")
 
@@ -42,15 +41,15 @@ export default function IndexPage() {
         {
           apiKey &&
           <>
-            <Tabs defaultValue="account" className="pb-96">
+            <Tabs defaultValue={defaultTab} className="pb-96">
               <TabsList>
-                <TabsTrigger value="account">Create</TabsTrigger>
-                <TabsTrigger value="password">Consume</TabsTrigger>
+                <TabsTrigger value="train">Train</TabsTrigger>
+                <TabsTrigger value="run">Run</TabsTrigger>
               </TabsList>
-              <TabsContent value="account">
+              <TabsContent value="train">
                 <Create />
               </TabsContent>
-              <TabsContent value="password">
+              <TabsContent value="run">
                 <Consume />
               </TabsContent>
             </Tabs>

@@ -66,6 +66,11 @@ export default function Create() {
       prompt: row.prompt,
       completion: row.completion
     }));
+
+    if (parsedInputs.length == 0) {
+      alert("There are no datapoints in this file")
+      return
+    }
     
     const newInputs = parsedInputs.map((inputData, index) => {
       return {
@@ -76,7 +81,7 @@ export default function Create() {
     })
 
     setInputs(newInputs.reverse())
-    setSelectedInputId(newInputs[0].id)
+    setSelectedInputId(newInputs[5].id)
 
     if (fileInputRef.current) {
       fileInputRef.current.value = "";

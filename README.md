@@ -2,6 +2,8 @@
 
 Train and run fine-tuned GPT models from the browser
 
+![TuneGPT Mockup](/public/mockup.png)
+
 ## Features
 
 - Train models

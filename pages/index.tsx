@@ -47,7 +47,7 @@ export default function IndexPage() {
             alt="mockup"
             width={4096}
             height={2304}
-            className="rounded-2xl max-w-2xl self-center text-center mx-auto"
+            className="rounded-2xl w-full max-w-2xl self-center text-center mx-auto"
           />
           <p className="text-lg text-slate-700 dark:text-slate-400 sm:text-xl mt-2">
             Train and run fine-tuned GPT models from the browser

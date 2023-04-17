@@ -29,10 +29,10 @@ export default function IndexPage() {
   return (
     <Layout>
       <Head>
-        <title>Next.js</title>
+        <title>TuneGPT</title>
         <meta
-          name="description"
-          content="Next.js template for building apps with Radix UI and Tailwind CSS"
+          name="TuneGPT"
+          content="Train and run fine tuned GPT models in the browser"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

@@ -1,3 +1,4 @@
+import Head from "next/head"
 
 import { Layout } from "@/components/layout"
 import { Button, buttonVariants } from "@/components/ui/button"
@@ -26,6 +27,15 @@ export default function App({ defaultTab } : Props) {
 
   return (
     <Layout>
+      <Head>
+        <title>TuneGPT</title>
+        <meta
+          name="TuneGPT"
+          content="Train and run fine tuned GPT models in the browser"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <section className="container grid items-center gap-6 pt-6 pb-8 md:py-10">
         {/* <div className="flex max-w-[980px] flex-col items-start gap-2"> */}
 

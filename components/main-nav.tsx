@@ -54,7 +54,7 @@ export function MainNav({ items }: MainNavProps) {
             variant="ghost"
             className="-ml-4 text-base hover:bg-transparent focus:ring-0 md:hidden"
           >
-            <Icons.logo className="mr-2 h-4 w-4" />{" "}
+            <Activity className="mr-2 h-4 w-4" />{" "}
             <span className="font-bold">Menu</span>
           </Button>
         </DropdownMenuTrigger>
@@ -65,7 +65,7 @@ export function MainNav({ items }: MainNavProps) {
         >
           <DropdownMenuLabel>
             <Link href="/" className="flex items-center">
-              <Icons.logo className="mr-2 h-4 w-4" /> {siteConfig.name}
+              <Activity className="mr-2 h-4 w-4" /> {siteConfig.name}
             </Link>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />

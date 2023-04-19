@@ -81,7 +81,7 @@ export default function Create() {
     })
 
     setInputs(newInputs.reverse())
-    setSelectedInputId(newInputs[5].id)
+    setSelectedInputId(newInputs[0].id)
 
     if (fileInputRef.current) {
       fileInputRef.current.value = "";

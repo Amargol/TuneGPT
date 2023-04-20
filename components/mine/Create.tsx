@@ -35,7 +35,6 @@ export default function Create() {
   const isLoading = statusMessage !== "" && statusMessage !== statusMessageDone
 
   useEffect(() => {
-    console.log("hey", rightSideRef.current.clientHeight)
     if (leftSideRef.current && rightSideRef.current) {
       leftSideRef.current.style.height = rightSideRef.current.clientHeight + "px"
     }
@@ -67,7 +66,7 @@ export default function Create() {
       completion: row.completion
     }));
 
-    if (parsedInputs.length == 0) {
+    if (parsedInputs.length <= 1) {
       alert("There are no datapoints in this file")
       return
     }
@@ -78,10 +77,10 @@ export default function Create() {
         name: "Input " + (index + 1),
         data: inputData
       }
-    })
+    }).slice(0, -1)
 
     setInputs(newInputs.reverse())
-    setSelectedInputId(newInputs[0].id)
+    setSelectedInputId(newInputs[1].id)
 
     if (fileInputRef.current) {
       fileInputRef.current.value = "";

@@ -49,7 +49,7 @@ export default function App({ defaultTab } : Props) {
         </div>
 
         {
-          apiKey &&
+          true &&
           <>
             <Tabs defaultValue={defaultTab} className="pb-96">
               <TabsList>
